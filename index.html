@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>献立帖 ・ 成功のレシピ</title>
+<meta name="description" content="千の記事から、今日のあなたに届く一献を。一献ガチャ・お品書き投票・献立目録で、noteの過去記事を新しい味わいで。">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="献立帖">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://kairyu33.github.io/kondate-chou/">
+<meta property="og:title" content="献立帖 ・ 成功のレシピ">
+<meta property="og:description" content="千の記事から、今日のあなたに届く一献を。一献ガチャ・お品書き投票・献立目録で、noteの過去記事を新しい味わいで。">
+<meta property="og:image" content="https://kairyu33.github.io/kondate-chou/assets/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="献立帖 ・ 成功のレシピ — 千の記事から、今日のあなたに届く一献を。">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="献立帖 ・ 成功のレシピ">
+<meta name="twitter:description" content="千の記事から、今日のあなたに届く一献を。一献ガチャ・お品書き投票・献立目録。">
+<meta name="twitter:image" content="https://kairyu33.github.io/kondate-chou/assets/ogp.png">
+<meta name="twitter:image:alt" content="献立帖 ・ 成功のレシピ">
+
+<!-- Theme color -->
+<meta name="theme-color" content="#1C1613">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Yuji+Syuku&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg class="washi-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.4 0 0 0 0 0.28 0 0 0 0 0.16 0 0 0 0.08 0"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" filter="url(#noise)"/>
+</svg>
+
+<header class="noren">
+  <div class="noren-inner">
+    <a href="#home" class="kanban">
+      <span class="kanban-mark">献</span>
+      <div class="kanban-text">
+        <div class="kanban-name">献立帖</div>
+        <div class="kanban-sub">成功のレシピ</div>
+      </div>
+    </a>
+    <nav class="meniu">
+      <a href="#gacha" class="meniu-link">一献</a>
+      <a href="#vote" class="meniu-link">品書き</a>
+      <a href="#catalog" class="meniu-link">目録</a>
+      <a id="noteLink" href="https://note.com/" target="_blank" rel="noopener" class="hanko">note へ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <svg class="enso" viewBox="0 0 400 400" aria-hidden="true">
+    <circle cx="200" cy="200" r="160" fill="none" stroke="#1a1412" stroke-width="14" stroke-linecap="round" stroke-dasharray="900 60" opacity="0.08"/>
+  </svg>
+
+  <div class="hero-inner">
+    <p class="hero-eyebrow">— 千の献立より —</p>
+    <h1 class="hero-title">
+      <span class="tate">今</span>
+      <span class="tate">日</span>
+      <span class="tate">の</span>
+      <span class="tate hi">一</span>
+      <span class="tate hi">献</span>
+      <span class="tate">を</span>
+    </h1>
+    <p class="hero-lead">
+      日々書き綴った千の献立の中から<br>
+      今日のあなたに届く一皿を<br>
+      おみくじのように引いていただけます
+    </p>
+
+    <a href="#gacha" class="makimono-btn">
+      <span class="makimono-inner">
+        <span class="makimono-text">一献を頂く</span>
+      </span>
+    </a>
+
+    <div class="shina-row">
+      <div class="shina shina-kiwami"><span class="shina-r">極</span><span class="shina-p">弐分</span></div>
+      <div class="shina shina-toku"><span class="shina-r">特</span><span class="shina-p">八分</span></div>
+      <div class="shina shina-jou"><span class="shina-r">上</span><span class="shina-p">弐割</span></div>
+      <div class="shina shina-nami"><span class="shina-r">並</span><span class="shina-p">七割</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="gacha" class="dan dan-primary">
+  <div class="dan-inner">
+    <div class="midashi">
+      <span class="midashi-mark">壱</span>
+      <h2 class="midashi-title">今日の一献</h2>
+      <p class="midashi-sub">一日一度だけ、お引きいただけます</p>
+    </div>
+
+    <div id="gachaStage" class="omikuji-stage">
+      <div id="gachaIdle" class="omikuji-idle">
+        <div class="suzu">
+          <div class="suzu-rope"></div>
+          <div class="suzu-bell">
+            <span class="suzu-char">御</span>
+          </div>
+        </div>
+        <button id="drawBtn" class="hanko hanko-large">
+          <span class="hanko-txt">御引</span>
+        </button>
+        <p id="drawState" class="draw-state">まだ本日は引かれておりません</p>
+      </div>
+
+      <div id="gachaAnim" class="omikuji-anim" style="display:none">
+        <div class="makimono-wrap">
+          <div class="makimono-roll roll-left"></div>
+          <div class="makimono-paper"></div>
+          <div class="makimono-roll roll-right"></div>
+        </div>
+        <p class="anim-txt">献立を選んでおります…</p>
+      </div>
+
+      <div id="gachaResult" class="omikuji-result" style="display:none">
+        <div class="flash" id="resultFlash"></div>
+
+        <div class="ofuda">
+          <div class="ofuda-top">
+            <span class="ofuda-banner">御 品 書</span>
+          </div>
+
+          <div class="rarity-stamp" id="resultRarity">
+            <span class="stamp-inner"></span>
+          </div>
+
+          <div class="result-title-box">
+            <div class="result-title" id="resultTitle"></div>
+          </div>
+
+          <div class="result-cat" id="resultCat"></div>
+
+          <div class="result-seal">
+            <svg viewBox="0 0 80 80" width="60" height="60">
+              <circle cx="40" cy="40" r="36" fill="none" stroke="#b23a2e" stroke-width="2.5"/>
+              <text x="40" y="48" text-anchor="middle" fill="#b23a2e" font-family="Yuji Syuku, serif" font-size="18" font-weight="bold">献</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <a id="readBtn" target="_blank" rel="noopener" class="hanko hanko-read">
+            <span class="hanko-txt">読む</span>
+          </a>
+          <button id="shareBtn" class="hanko hanko-share">
+            <span class="hanko-txt">拡む</span>
+          </button>
+        </div>
+
+        <div id="ssrBonus" class="kiwami-bonus" style="display:none">
+          <div class="kiwami-deco-top"><span>❖</span><span>❖</span><span>❖</span></div>
+          <div class="kiwami-title">極 を 引 か れ ま し た</div>
+          <p class="kiwami-msg">
+            殿堂入りの一献を引き当てられた貴方へ、<br>
+            店主より心ばかりのご案内がございます。<br>
+            Xにて <span class="x-mention" id="xMention">@ご主人様</span> へお声掛けくださいませ。<br>
+            お礼とともに、会員席へのご招待を差し上げます。
+          </p>
+          <div class="kiwami-deco-bot"><span>❖</span><span>❖</span><span>❖</span></div>
+        </div>
+
+        <div class="related-block">
+          <div class="related-head">
+            <span class="related-deco">—</span>
+            <h3 class="related-h">同じ膳の献立</h3>
+            <span class="related-deco">—</span>
+          </div>
+          <div id="relatedList" class="related-list"></div>
+        </div>
+
+        <button id="againBtn" class="again-btn">— また明日 —</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vote" class="dan dan-secondary">
+  <div class="dan-inner">
+    <div class="midashi">
+      <span class="midashi-mark">弐</span>
+      <h2 class="midashi-title">お品書き</h2>
+      <p class="midashi-sub">明日の献立を、皆様のお声で決めさせていただきます</p>
+    </div>
+
+    <div id="voteArea" class="shina-book">
+      <p class="empty">本日のお品書きは、まだご用意出来ておりません。</p>
+    </div>
+  </div>
+</section>
+
+<section id="ranking" class="dan dan-secondary" style="display:none">
+  <div class="dan-inner">
+    <div class="midashi">
+      <span class="midashi-mark">参</span>
+      <h2 class="midashi-title">目利き帖</h2>
+      <p class="midashi-sub">今月、献立帖をよく親しんでくださった皆様</p>
+    </div>
+
+    <div id="rankingMe" class="ranking-me"></div>
+    <ol id="rankingList" class="ranking-list"></ol>
+
+    <div id="rankingRegister" class="ranking-register">
+      <p class="muted-line">↑ 匿名ですが、お呼び名と X のID（@抜き）を頂戴できれば、上位の方にはこちらから御礼の品（メンバーシップご招待）をお届けします。</p>
+      <div class="ranking-form">
+        <input type="text" id="rankNick" placeholder="お呼び名（例：花丸さん）" maxlength="24" class="ip-tegaki">
+        <input type="text" id="rankXHandle" placeholder="X ID（@抜き）任意" maxlength="32" class="ip-tegaki">
+        <button id="rankSubmitBtn" class="again-btn ranking-submit">— お届け先を残す —</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="dan dan-primary">
+  <div class="dan-inner">
+    <div class="midashi">
+      <span class="midashi-mark">参</span>
+      <h2 class="midashi-title">献立目録</h2>
+      <p class="midashi-sub">千の献立を、品位と題目でお探しいただけます</p>
+    </div>
+
+    <div class="toc-filter">
+      <input id="searchBox" type="text" placeholder="題目で探す…" class="toc-search">
+      <div class="toc-tabs">
+        <button class="toc-tab active" data-r="">全て</button>
+        <button class="toc-tab" data-r="SSR">極</button>
+        <button class="toc-tab" data-r="SR">特</button>
+        <button class="toc-tab" data-r="R">上</button>
+        <button class="toc-tab" data-r="N">並</button>
+      </div>
+    </div>
+
+    <div class="toc-filter toc-filter-2">
+      <select id="catCategory" class="toc-select">
+        <option value="">— 題目（全て） —</option>
+      </select>
+      <select id="catSort" class="toc-select">
+        <option value="rarity">並び: 品位順</option>
+        <option value="newest">並び: 新しい順</option>
+        <option value="oldest">並び: 古い順</option>
+        <option value="random">並び: 順不同</option>
+      </select>
+      <label class="toc-toggle">
+        <input type="checkbox" id="catUnreadOnly">
+        <span>未読のみ</span>
+      </label>
+      <button id="catReset" class="toc-reset" type="button">— 既読を消す —</button>
+    </div>
+
+    <div id="catalogStat" class="toc-stat"></div>
+    <div id="catalogList" class="mokuroku"></div>
+    <button id="loadMore" class="again-btn" style="display:none">— さらに見る —</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="shoji">
+  <div class="shoji-inner">
+    <div class="shoji-brand">
+      <span class="shoji-mark">献</span>
+      <div>
+        <div class="shoji-name">献立帖</div>
+        <div class="shoji-sub">日々の小さな改善を</div>
+      </div>
+    </div>
+    <p class="shoji-links">
+      <a id="footNote" href="https://note.com/" target="_blank" rel="noopener">note</a>
+      <span>・</span>
+      <a id="footMember" href="#" target="_blank" rel="noopener">会員席（メンバーシップ）</a>
+    </p>
+    <p class="shoji-copy">© 成功のレシピ</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
